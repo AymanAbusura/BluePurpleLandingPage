@@ -62,55 +62,6 @@ window.onload = function() {;
     });
     // Конец
 
-    // SLIDER
-    const carousel = document.querySelector(".carousel");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    let isDragging = false,
-        startX,
-        scrollLeft;
-
-    function scrollCarousel(direction) {
-        const cardWidth = carousel.querySelector(".review-card").offsetWidth;
-        carousel.scrollBy({
-            left: direction === "next" ? cardWidth : -cardWidth,
-            behavior: "smooth"
-        });
-    }
-
-    prevBtn.addEventListener("click", () => scrollCarousel("prev"));
-    nextBtn.addEventListener("click", () => scrollCarousel("next"));
-
-    const startDrag = (e) => {
-        isDragging = true;
-        carousel.classList.add("dragging");
-        startX = e.pageX || e.touches[0].pageX;
-        scrollLeft = carousel.scrollLeft;
-    };
-
-    const onDrag = (e) => {
-        if (!isDragging) return;
-        const x = e.pageX || e.touches[0].pageX;
-        const walk = (x - startX);
-        carousel.scrollLeft = scrollLeft - walk;
-    };
-
-    const stopDrag = () => {
-        isDragging = false;
-        carousel.classList.remove("dragging");
-    };
-
-    carousel.addEventListener("mousedown", startDrag);
-    carousel.addEventListener("mousemove", onDrag);
-    carousel.addEventListener("mouseleave", stopDrag);
-    carousel.addEventListener("mouseup", stopDrag);
-
-    carousel.addEventListener("touchstart", startDrag);
-    carousel.addEventListener("touchmove", onDrag);
-    carousel.addEventListener("touchend", stopDrag);
-    // END
-
     const spoilersArray = document.querySelectorAll("[data-spoilers]");
     if (spoilersArray.length > 0) {
         const spoilersRegulars = Array.from(spoilersArray).filter(function(item, index, self) {
