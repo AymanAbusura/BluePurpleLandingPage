@@ -455,7 +455,6 @@ textarea {
 	margin-bottom:10px
 }
 .form-contact{
-	/*margin-inline:auto;*/
 	max-width:630px;
 }
 .card__img img,.holder__image img{
@@ -750,10 +749,6 @@ textarea {
 	font-size:14px;
 	color: #fff;
 }
-/*.footer p span{
-	text-indent:20px;
-	display:block
-}*/
 .footer .flex-bl{
 	-webkit-box-orient:vertical;
 	-webkit-box-direction:normal;
@@ -794,7 +789,6 @@ textarea {
 }
 .footer-bottom {
 	padding-block:12px 30px;
-	/*border-top:1px solid rgba(255,255,255,.2);*/
 	position: relative;
 	z-index: 1;
 }
@@ -1037,14 +1031,10 @@ table p+p{
 		font-size:16px
 }
 	.language{
-		/*-webkit-box-ordinal-group:4;
-		-ms-flex-order:3;
-		order:3;*/
+
 }
 	.home__title{
 		font-size:48px;
-		/*margin-bottom:20px;*/
-		/*margin-top:30px;*/
 		padding-right:20px
 }
 	.home__title sup{
@@ -1247,9 +1237,6 @@ table p+p{
 }
 	.btn:hover {
 		transform: translateY(-2px);
-		/*background-color:transparent;*/
-		/*border:1px solid #8a9fa3;*/
-		/*color:#1b3942*/
 }
 	.btn-o:hover{
 		background-color:#01c9ee;
